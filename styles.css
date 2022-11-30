@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root{
+    --color-1: rgb(53, 234, 43);
+    --color-2: rgb(33, 33, 33);
+    --color-3: rgba(107, 0, 0, 0.609);
+  }
+  
+  html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Klill', sans-serif;
+  }
+  
+  #navbar{
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    width: 100%;
+    background: black;
+    z-index: 30;
+  }
+  
+  #navbar ul{
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  #navbar ul li{
+    box-sizing: inherit;
+    list-style: none;
+    font-size: 20px;
+    color: var(--color-1);
+  }
+
+
+  #navbar a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding:  1em;
+  }
+
+  #navbar a:hover{
+    background-color: gray;
+  }
+  
+  #welcome-section{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-2);
+  }
+  
+  #welcome-section > h1,p{
+    text-align: center;
+    position: relative;
+    top: 50%;
+  }
+  
+  #welcome-section h1{
+    margin-bottom: 0.5em;
+    font-size: 60px;
+    color: white;
+    
+  }
+  #welcome-section .animation-intro1{
+    animation: intro ease-in forwards;
+    animation-duration: 2s;
+  }
+
+  #welcome-section .animation-intro2{
+    color: var(--color-2);
+    animation: intro ease-in forwards;
+    animation-duration: 2s;
+    animation-delay: 1s;
+  }
+
+  #welcome-section p{
+    font-style: italic;
+    color: var(--color-2);
+    font-size: 24px;
+    animation: intro2 ease-in forwards;
+    animation-duration: 2s;
+    animation-delay: 2s;
+  }
+
+@keyframes intro {
+  0%{
+    color: var(--color-2);
+    transform: scale(0.5);
+  }
+  100%{
+    color: white;
+    transform: scale(1.0);
+  }
+}
+
+@keyframes intro2{
+  0%{
+    color: var(--color-2);
+  }
+  100%{
+    color: var(--color-1);
+  }
+}
+
+  #projects{
+    height: auto;
+    text-align: center;
+    padding: 8rem 2rem;
+    background: var(--color-3);
+  }
+
+  .project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 3em;
+    margin-top: 2rem;
+  }
+
+#projects h2,p{
+  text-align: center;
+  color: white; 
+  
+}  
+
+#projects h2{
+  font-size: 30px;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--color-1);
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+#projects p{
+  top: 0%;
+
+}
+
+
+
+.project-container a{
+  text-decoration: none;
+  transition: transform 1s ease-in-out 0ms;
+}
+
+.project-container p{
+  background: var(--color-2);
+  border-radius: 1%;
+  padding: 2em;
+  margin-top: -1em;
+  color: white;
+}
+
+
+.project-1-img{
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 1%;
+}
+
+.project-2-img{
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 1%;
+}
+
+.project-3-img{
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 1%;
+}
+
+.project-4-img{
+  width: 100%;
+  height: 50vh;
+  border-radius: 1%;
+}
+
+.project-container a:hover{
+  transform: scale(1.1);
+}
+
+.code{
+  color: var(--color-2);
+  transition: color 0.3s ease-out;
+}
+
+.project-container a:hover .code {
+  color: var(--color-1);
+}
+
+.show-all{
+  padding: 1em;
+  font-size: 1rem;
+  display: inline-block;
+  border: 1px solid black;
+  transition: background 0.5s ease-out;
+  background:var(--color-2);
+  text-decoration: none;
+  color: white;
+  border-radius: 5%;
+  margin-top: 5em;
+}
+.show-all:hover{
+  background: rgba(8, 177, 39, 0.83);
+}
+
+#contact{
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  background: var(--color-2);
+  overflow: hidden;
+}
+
+#contact h1{
+  text-align: center;
+  color: white;
+  padding-top: 40vh;
+  font-size: 40px;
+}
+
+.logos-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.logo{
+  margin-left: 2em;
+  margin-right: 2em;
+  left: 50%;
+  font-size: 45px;
+  color: white;
+  display: block;
+}
+
+.logos-container a{
+  text-decoration: none;
+  transition: transform ease-out 0.3s;
+  padding-bottom: 2em;
+}
+
+.logos-container a:hover{
+  transform: translateY(10px);
+}
+
+@media (max-width: 600px){
+  html{
+    font-size: 10px;
+}
+.logos-container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logos-container a{
+  padding-bottom: 1em;
+}
+}
